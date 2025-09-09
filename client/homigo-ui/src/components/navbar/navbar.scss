@@ -1,0 +1,67 @@
+@import "../../responsive.scss";
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    
+    a{
+        transition: all 0.4s ease;
+
+        @include sm{
+            display: none;
+        }
+
+        &:hover{
+            background-color: #fa4a5c;
+            color: white;
+            padding:20px;
+            border-radius : 10px;
+            
+        }
+    }
+
+    .left{
+        flex:3;
+        display: flex;
+        align-items: center; 
+        gap: 50px;  
+
+        .logo{
+            font-weight:bold;
+            font-size: 20px; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img{
+                height: 40px;
+                width: 40px;    
+            }
+            span{
+                @include md{
+                    display: none;
+                }
+                @include sm{
+                    display: initial;
+                }
+            }
+        }
+    }
+    .right{
+        flex:2; 
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color:#f9f7d1;
+        height:100%;
+        a{
+            padding:12px 20px;
+            margin:20px;
+        }
+
+        .register{
+            background-color: #fa4a5c;
+
+        }
+    }
+}
